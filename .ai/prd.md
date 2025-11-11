@@ -11,11 +11,13 @@ Manualne tworzenie fiszek jest jednym z najskuteczniejszych sposobów nauki, ale
 ## 3. Wymagania funkcjonalne
 
 ### 3.1. System kont użytkowników
+
 - Użytkownicy mogą zakładać konto za pomocą adresu e-mail i hasła.
 - Użytkownicy mogą logować się na swoje konto.
 - Dane użytkownika (w tym kolekcja fiszek) są bezpiecznie przechowywane.
 
 ### 3.2. Generowanie fiszek przez AI
+
 - Użytkownik może wkleić tekst źródłowy o długości od 1 000 do 10 000 znaków.
 - AI generuje od 5 do 100 fiszek na podstawie dostarczonego tekstu.
 - Wygenerowane fiszki mają format Pytanie-Odpowiedź lub Termin-Definicja.
@@ -23,6 +25,7 @@ Manualne tworzenie fiszek jest jednym z najskuteczniejszych sposobów nauki, ale
 - Podczas generowania wyświetlana jest animacja ładowania.
 
 ### 3.3. Przegląd i akceptacja fiszek
+
 - Po wygenerowaniu, fiszki pojawiają się na liście do przeglądu.
 - Użytkownik może każdą fiszkę indywidualnie:
     - Zaakceptować: fiszka jest dodawana do głównej kolekcji użytkownika.
@@ -31,6 +34,7 @@ Manualne tworzenie fiszek jest jednym z najskuteczniejszych sposobów nauki, ale
 - Nieprzejrzane fiszki z sesji są zapisywane w `localStorage`, a użytkownik jest informowany o możliwości ich wznowienia przy następnej wizycie.
 
 ### 3.4. Zarządzanie kolekcją fiszek
+
 - Wszystkie zaakceptowane fiszki (zarówno wygenerowane przez AI, jak i stworzone manualnie) znajdują się na jednej liście.
 - Użytkownik może tworzyć fiszki manualnie za pomocą prostego formularza (awers/rewers).
 - Użytkownik może edytować istniejące fiszki w swojej kolekcji. Edycja resetuje postęp nauki (parametry SM-2).
@@ -38,6 +42,7 @@ Manualne tworzenie fiszek jest jednym z najskuteczniejszych sposobów nauki, ale
 - Zaimplementowana jest prosta, kliencka wyszukiwarka tekstowa do filtrowania fiszek na liście.
 
 ### 3.5. System nauki (Spaced Repetition)
+
 - Aplikacja wykorzystuje gotową implementację algorytmu SM-2.
 - Codziennie prezentowana jest użytkownikowi lista fiszek zaplanowanych do powtórki.
 - W interfejsie nauki, po odsłonięciu odpowiedzi, użytkownik ocenia swoją znajomość, wybierając jedną z trzech opcji: "Nie wiem", "Trudne", "Łatwe".
@@ -46,6 +51,7 @@ Manualne tworzenie fiszek jest jednym z najskuteczniejszych sposobów nauki, ale
 ## 4. Granice produktu
 
 Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
+
 - Zaawansowany, autorski algorytm powtórek (np. oparty na SuperMemo).
 - Import plików w formatach takich jak PDF, DOCX, itp.
 - Możliwość grupowania fiszek w talie lub foldery.
@@ -57,6 +63,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
 ## 5. Historyjki użytkowników
 
 ### ID: US-001
+
 - Tytuł: Rejestracja nowego użytkownika
 - Opis: Jako nowy użytkownik, chcę móc założyć konto za pomocą mojego adresu e-mail i hasła, abym mógł bezpiecznie przechowywać moje fiszki.
 - Kryteria akceptacji:
@@ -67,6 +74,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     5. W przypadku błędu (np. zajęty e-mail), wyświetlany jest czytelny komunikat.
 
 ### ID: US-002
+
 - Tytuł: Logowanie użytkownika
 - Opis: Jako zarejestrowany użytkownik, chcę móc zalogować się na swoje konto, aby uzyskać dostęp do mojej kolekcji fiszek.
 - Kryteria akceptacji:
@@ -75,6 +83,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     3. W przypadku podania błędnych danych, wyświetlany jest stosowny komunikat.
 
 ### ID: US-003
+
 - Tytuł: Ekran powitalny dla nowych użytkowników
 - Opis: Jako nowy użytkownik, po pierwszym zalogowaniu chcę zobaczyć prosty ekran powitalny, który wyjaśni mi, jak wygenerować moje pierwsze fiszki.
 - Kryteria akceptacji:
@@ -83,6 +92,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     3. Posiada wyraźny przycisk lub link prowadzący do generatora.
 
 ### ID: US-004
+
 - Tytuł: Generowanie fiszek z tekstu
 - Opis: Jako użytkownik, chcę wkleić fragment tekstu z moich notatek i automatycznie wygenerować z niego fiszki, aby zaoszczędzić czas.
 - Kryteria akceptacji:
@@ -93,6 +103,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     5. Po zakończeniu generowania, pod formularzem pojawia się lista fiszek do przeglądu.
 
 ### ID: US-005
+
 - Tytuł: Walidacja długości tekstu wejściowego
 - Opis: Jako użytkownik, próbując wygenerować fiszki, chcę otrzymać informację zwrotną, jeśli wklejony tekst jest za krótki lub za długi.
 - Kryteria akceptacji:
@@ -101,6 +112,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     3. Przycisk "Generuj" pozostaje nieaktywny w obu powyższych przypadkach.
 
 ### ID: US-006
+
 - Tytuł: Przegląd, akceptacja i odrzucenie wygenerowanych fiszek
 - Opis: Jako użytkownik, po wygenerowaniu fiszek chcę mieć możliwość ich przejrzenia, aby zadecydować, które z nich dodać do mojej kolekcji.
 - Kryteria akceptacji:
@@ -110,6 +122,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     4. Kliknięcie "Odrzuć" usuwa fiszkę z listy przeglądu bez dodawania jej do kolekcji.
 
 ### ID: US-007
+
 - Tytuł: Edycja fiszki podczas przeglądu
 - Opis: Jako użytkownik, chcę mieć możliwość poprawienia błędów lub zmiany treści wygenerowanej fiszki, zanim dodam ją do mojej kolekcji.
 - Kryteria akceptacji:
@@ -119,6 +132,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     4. Kliknięcie "Zapisz" zatwierdza zmiany i automatycznie akceptuje fiszkę, przenosząc ją do głównej kolekcji.
 
 ### ID: US-008
+
 - Tytuł: Wznowienie niedokończonej sesji przeglądu
 - Opis: Jako użytkownik, jeśli przypadkowo zamknę kartę przeglądarki podczas przeglądania wygenerowanych fiszek, chcę mieć możliwość wznowienia tej sesji później.
 - Kryteria akceptacji:
@@ -128,6 +142,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     4. Wybór "Nie" usuwa zapisaną sesję z `localStorage`.
 
 ### ID: US-009
+
 - Tytuł: Manualne tworzenie fiszki
 - Opis: Jako użytkownik, chcę mieć możliwość ręcznego dodania nowej fiszki do mojej kolekcji, gdy mam w głowie konkretne pytanie i odpowiedź.
 - Kryteria akceptacji:
@@ -136,6 +151,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     3. Po wypełnieniu i zapisaniu, nowa fiszka jest dodawana bezpośrednio do mojej głównej kolekcji.
 
 ### ID: US-010
+
 - Tytuł: Przeglądanie i wyszukiwanie kolekcji fiszek
 - Opis: Jako użytkownik z dużą bazą fiszek, chcę móc szybko wyszukać konkretną kartę, aby ją edytować lub usunąć.
 - Kryteria akceptacji:
@@ -145,6 +161,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     4. Wyszukiwanie jest niewrażliwe na wielkość liter.
 
 ### ID: US-011
+
 - Tytuł: Edycja fiszki z kolekcji
 - Opis: Jako użytkownik, chcę móc edytować fiszkę, która już znajduje się w mojej kolekcji, aby poprawić błędy lub zaktualizować informacje.
 - Kryteria akceptacji:
@@ -154,6 +171,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     4. Zapisanie edytowanej fiszki powoduje zresetowanie jej postępu w algorytmie SM-2 do stanu początkowego.
 
 ### ID: US-012
+
 - Tytuł: Usuwanie fiszki z kolekcji
 - Opis: Jako użytkownik, chcę móc trwale usunąć fiszkę z mojej kolekcji, jeśli uznam, że nie jest mi już potrzebna.
 - Kryteria akceptacji:
@@ -162,6 +180,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     3. Po potwierdzeniu, fiszka jest nieodwracalnie usuwana z mojej kolekcji.
 
 ### ID: US-013
+
 - Tytuł: Rozpoczęcie sesji nauki
 - Opis: Jako użytkownik, chcę, aby aplikacja każdego dnia podpowiadała mi, które fiszki powinienem powtórzyć, abym mógł efektywnie utrwalać wiedzę.
 - Kryteria akceptacji:
@@ -170,6 +189,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
     3. Fiszki są prezentowane pojedynczo, najpierw tylko awersem.
 
 ### ID: US-014
+
 - Tytuł: Ocenianie odpowiedzi podczas nauki
 - Opis: Jako użytkownik, po zobaczeniu odpowiedzi na fiszce, chcę ocenić, jak dobrze ją znałem, aby algorytm mógł zaplanować kolejną powtórkę.
 - Kryteria akceptacji:
@@ -181,6 +201,7 @@ Następujące funkcjonalności celowo NIE wchodzą w zakres wersji MVP:
 ## 6. Metryki sukcesu
 
 Kluczowe wskaźniki (KPI), które będą mierzone w celu oceny sukcesu produktu:
+
 1. Jakość generowania AI:
     - Metryka: Procent fiszek zaakceptowanych przez użytkownika (bezpośrednio lub po edycji).
     - Cel: 75%.
